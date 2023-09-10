@@ -13,7 +13,7 @@
     --color-text-primary: rgba(0, 0, 0, 0.71);
     --color-text-secondary: rgba(98, 63, 63, 0.71);
     --color-text-tertiary: rgba(0, 0, 0, 0.67);
-    --color-text-quaternary: rgba(255, 255, 255, 0.71);
+    --color-text-quaternary: rgba(255, 255, 255, 0.856);
     --color-theme-background: rgba(255, 255, 255, 0.48);
     --color-message-bubble-background: #D9D9D9;
 }
@@ -125,6 +125,18 @@ a {
 
 h1 {
     display: none;
+}
+
+.theme-switch {
+    width: 5rem;
+    aspect-ratio: 1;
+    background-color: var(--color-theme-background);
+    border-radius: 100%;
+    background-image: url(../images/icons/theme-switch.svg);
+    background-size: 3.6rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
 }
 
 /*******************************************************************************************************/
