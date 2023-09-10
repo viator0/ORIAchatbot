@@ -7,7 +7,7 @@
     background-color: transparent;
 }
 
-:root {
+:root.light {
     --color-submit-background: #FFFFFF;
     --color-input-background: #D9D9D9;
     --color-text-primary: rgba(0, 0, 0, 0.71);
@@ -16,6 +16,13 @@
     --color-text-quaternary: rgba(255, 255, 255, 0.856);
     --color-theme-background: rgba(255, 255, 255, 0.48);
     --color-message-bubble-background: #D9D9D9;
+    --background-image: url(../images/background.svg);
+}
+
+:root.dark {
+    --background: none;
+    --color-text-quaternary: rgba(255, 255, 255, 0.856);
+    --color-theme-background: rgba(255, 255, 255, 0.48);
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +50,9 @@ html {
 }
 
 body {
-    background: url(../images/background.svg) no-repeat;
+    background-color: #343541;
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     font-family: 'Jost', sans-serif;

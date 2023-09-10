@@ -28,14 +28,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
 
     <!--SCRIPTS-->
-
+    <script src="js/light-theme-toggle.js"></script>
 
 </head>
 
 <body>
+    <script>
+        const theme = localStorage.getItem("theme") || "light";
+        const root = document.documentElement;  //root element
+        root.classList.add(theme);
+    </script>
+
     <h1>ORIA Chat Bot</h1>
 
-    <button class="theme-switch icon-button"></button>
+    <button class="theme-switch icon-button" onclick="pickTheme()"></button>
 
     <!--LANGUAGE SCREEN START-->
     <div id="language-screen">
