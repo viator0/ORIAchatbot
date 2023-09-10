@@ -1,4 +1,8 @@
 @media screen and (width > 650px) {
+
+    body {
+        min-height: 100vh;
+    }
     
     #language-screen #languages-container {
         margin-top: 3rem;
