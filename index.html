@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--META TAG START-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cahit Doğan">
+    <meta name="description" content="ORIA Chat Bot">
+
+    <!--PRELOAD-->
+
+
+    <!--TITLE-->
+    <title>ORIA Chat Bot</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style650.css">
+    
+    <!--FAVICON-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"> 
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+
+    <!--SCRIPTS-->
+    <script src="js/light-theme-toggle.js"></script>
+
+</head>
+
+<body>
+    <script>
+        const theme = localStorage.getItem("theme") || "light";
+        const root = document.documentElement;  //root element
+        root.classList.add(theme);
+    </script>
+
+    <h1>ORIA Chat Bot</h1>
+
+    <button class="theme-switch icon-button" onclick="pickTheme()"></button>
+
+    <!--LANGUAGE SCREEN START-->
+    <div id="language-screen">
+        <img id="logo" src="images/logo.png" alt="ORIA logo">
+        <p>Please select your preferred language:</p>
+        <div id="languages-container">
+            <button type="button" class="icon-button" id="english-button" aria-label="english" title="English"></button>
+            <button type="button" class="icon-button" id="french-button" aria-label="french" title="French"></button>
+            <button type="button" class="icon-button" id="spanish-button" aria-label="spanish" title="Spanish"></button>
+            <button type="button" class="icon-button" id="chinese-button" aria-label="chinese" title="Chinese"></button>
+            <button type="button" class="icon-button" id="arabic-button" aria-label="arabic" title="Arabic"></button>
+            <button type="button" class="icon-button" id="japanese-button" aria-label="japanese" title="Japanese"></button>
+        </div>
+    </div>
+    <!--LANGUAGE SCREEN END-->
+
+
+    <!--LICENCE SCREEN START-->
+    <div id="licence-key-screen">
+        <img id="logo" src="images/logo.png" alt="ORIA logo" />
+        <form id="licence-key-id">
+        <input type="text" placeholder="Insert your Licence Key "></input>
+        <button type="button">Install</button>
+        </form>
+    </div>
+    <!--LICENCE SCREEN END-->
+
+
+    <!--API KEY SCREEN START-->
+    <div id="api-key-screen">
+        <img id="logo" src="images/logo.png" alt="ORIA logo" />
+        <form id="licence-key-id">
+          <input type="text" placeholder="Insert your API Key"></input>
+          <button type="button" onClick={this.toggleScreens3}>Install</button>
+        </form>
+      </div>
+    <!--API KEY SCREEN END-->
+
+    
+<script src="js/lang-switch-screen-switch.js"></script>
+
+</body>
+
+</html>
