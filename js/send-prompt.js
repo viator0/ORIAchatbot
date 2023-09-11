@@ -3,6 +3,8 @@ const promptInput = document.querySelector("#prompt-input");
 const examplePromptsContainer = document.querySelector("#example-prompts");
 const examplePrompts = document.querySelectorAll("#example-prompts article");
 
+//TEXT PROMPT FUNCTION
+
 sendButton.addEventListener('click', () => {
     if (promptInput.value.trim() !== "") {
         examplePromptsContainer.style.display = "none";
@@ -11,6 +13,8 @@ sendButton.addEventListener('click', () => {
         aiResponseFunction();
     }
 });
+
+//EXAMPLE PROMPT FUNCTION
 
 examplePrompts.forEach((examplePrompt) => {
     examplePrompt.addEventListener('click', () => {
@@ -21,6 +25,7 @@ examplePrompts.forEach((examplePrompt) => {
     });
 })
 
+//USER PROMPT FUNCTION
  
 function userPromptFunction(inputType, exampleOrder) {
     const userPrompt = document.createElement("article");
@@ -37,6 +42,8 @@ function userPromptFunction(inputType, exampleOrder) {
     chatBalloonsSection.appendChild(userPrompt);
 }
 
+//AI RESPONSE
+
 function aiResponseFunction() {
     const aiResponse = document.createElement("article");
     aiResponse.classList.add("ai-response");
@@ -45,6 +52,7 @@ function aiResponseFunction() {
     chatBalloonsSection.appendChild(aiResponse);
 }
 
+//ENTER BUTTON FUNCTION
 
 document.querySelector("#chat-tools form").addEventListener("submit", function(event) {
     event.preventDefault(); // Formun varsayılan gönderme davranışını engelle

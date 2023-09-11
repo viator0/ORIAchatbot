@@ -5,6 +5,8 @@ const spanishLanguage = document.getElementById('spanish-button');
 const arabicLanguage = document.getElementById('arabic-button');
 const japaneseLanguage = document.getElementById('japanese-button');
 
+//switch language screen and apply language
+
 englishLanguage.addEventListener('click', () => {
     toggleScreens1();
 });
@@ -33,6 +35,9 @@ japaneseLanguage.addEventListener('click', () => {
     changeToJapanese();
     toggleScreens1();
     });
+
+
+//LANGUAGE FUNCTIONS
 
 const licenceKeyInput = document.querySelector("#licence-key-screen input");
 const installButton1 = document.querySelector("#licence-key-screen button");
