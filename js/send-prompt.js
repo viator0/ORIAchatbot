@@ -44,3 +44,18 @@ function aiResponseFunction() {
     aiResponse.textContent = "AI Response Text";
     chatBalloonsSection.appendChild(aiResponse);
 }
+
+
+document.querySelector("#chat-tools form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Formun varsayılan gönderme davranışını engelle
+    document.querySelector("#send-button").click(); // Gönder düğmesini tıkla
+  });
+  
+  document.querySelector("#chat-tools form input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Enter tuşunun varsayılan davranışını engelle
+      document.querySelector("#send-button").click(); // Gönder düğmesini tıkla
+    }
+  });
+
+
