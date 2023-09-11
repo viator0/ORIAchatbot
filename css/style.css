@@ -313,7 +313,7 @@ main > img {
     display: flex;
     gap: 5rem;
     position: absolute;
-    bottom: 18%;
+    bottom: 16%;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -325,9 +325,11 @@ main > img {
     background-color: var(--color-input-background);
     border-radius: 2.5rem;
     text-align: center;
-    padding: 2.5rem 2rem;
     font-size: 1.3rem;
     color: var(--color-text-primary);
+    padding: 0 2rem;
+    display: grid;
+    place-content: center;
 }
 
 main .theme-switch {
