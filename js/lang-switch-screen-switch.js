@@ -38,12 +38,14 @@ const licenceKeyInput = document.querySelector("#licence-key-screen input");
 const installButton1 = document.querySelector("#licence-key-screen button");
 const apiKeyInput = document.querySelector("#api-key-screen input");
 const installButton2 = document.querySelector("#api-key-screen button");
+const sendButton = document.querySelector("#send-button");
 
 function changeToFrench() {
     licenceKeyInput.placeholder = "Insérez votre clé de licence";
     installButton1.textContent = "Installer";
     apiKeyInput.placeholder = "Insérez votre clé d'API Open AI";
     installButton2.textContent = "Installer";
+    sendButton.textContent = "Envoyer";
 }
 
 function changeToChinese() {
@@ -51,6 +53,7 @@ function changeToChinese() {
     installButton1.textContent = "安装";
     apiKeyInput.placeholder = "插入您的开放式人工智能应用程序接口密钥";
     installButton2.textContent = "安装";
+    sendButton.textContent = "发送";
 }
 
 function changeToSpanish() {
@@ -58,6 +61,7 @@ function changeToSpanish() {
     installButton1.textContent = "Instale";
     apiKeyInput.placeholder = "Inserte su CLAVE de la API de Open AI";
     installButton2.textContent = "Instale";
+    sendButton.textContent = "Enviar";
 }
 
 function changeToArabic() {
@@ -65,6 +69,7 @@ function changeToArabic() {
     installButton1.textContent = "تثبيت";
     apiKeyInput.placeholder = "أدخل مفتاح واجهة برمجة التطبيقات لـ Open AI الخاص بك";
     installButton2.textContent = "تثبيت";
+    sendButton.textContent = "إرسال";
 }
 
 function changeToJapanese() {
@@ -72,6 +77,7 @@ function changeToJapanese() {
     installButton1.textContent = "インストール";
     apiKeyInput.placeholder = "Open AI API KEYを挿入する";
     installButton2.textContent = "インストール";
+    sendButton.textContent = "送信";
 }
 
 
@@ -98,4 +104,19 @@ installButton1.addEventListener('click', () => {
 function toggleScreens2() {
     licenceKeyScreen.style.display = 'none';
     apiKeyScreen.style.display = 'flex';
+}
+
+installButton2.addEventListener('click', () => {
+    toggleScreens3();
+});
+
+const mainScreen = document.querySelector('main');
+const fixedThemeSwitcher = document.querySelector('#fixed-theme-switcher');
+const body = document.querySelector('body');
+
+function toggleScreens3() {
+    apiKeyScreen.style.display = 'none';
+    mainScreen.style.display = 'block';
+    fixedThemeSwitcher.style.display = 'none';
+    body.style.display = 'block';
 }

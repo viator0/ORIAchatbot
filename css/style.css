@@ -64,31 +64,6 @@ body {
     padding: 3rem 0;
 }
 
-header {
-    width: 100%;
-}
-
-header > .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 92vw;
-    max-width: 115rem;
-    height: 6.2rem;
-    transition: height 0.5s, background-color 0.5s, box-shadow 0.5s;
-}
-
-.sticky-header {
-    position: sticky;
-    top: 0;
-}
-
-main, footer {
-    width: 92vw;
-    max-width: 115rem;
-    margin: auto;
-}
-
 img {
     max-width: 100%;
     max-height: 100%;
@@ -313,3 +288,80 @@ body {
     font-weight: 500;
 }
 
+/*******************************************************************************************************/
+
+main {
+    display: none;
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+    max-width: 100rem;
+    max-height: 75rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main > img {
+    position: static;
+    left: 2rem;
+    top: 2rem;
+    width: 10rem;
+    aspect-ratio: 1;
+}
+
+main .theme-switch {
+    position: unset;
+}
+
+main > section#chat-tools {
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr 1fr;
+    justify-items: center;
+    width: 100%;
+}
+
+main > section#chat-tools > button{
+    width: 5rem;
+    aspect-ratio: 1;
+}
+
+main > section#chat-tools > button:nth-child(1) {
+    background-image: url(../images/icons/regenerate.svg);
+    background-color: var(--color-theme-background);
+    border-radius: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main > section#chat-tools > form {
+    position: relative;
+    width: 95%;
+}
+
+main > section#chat-tools > form > input[type="text"] {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color-input-background);
+    border-radius: 2.5rem;
+    padding-left: 3rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+main > section#chat-tools > form > button {
+    width: 10.8rem;
+    height: 5rem;
+    background-color: var(--color-submit-background);
+    border-radius: 2.5rem;
+    position: absolute;
+    right: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+main > section#chat-tools > button:nth-child(4) {
+    background-image: url(../images/icons/message-button.svg);
+    background-size: 7rem;
+}

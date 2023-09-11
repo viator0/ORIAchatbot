@@ -41,7 +41,7 @@
 
     <h1>ORIA Chat Bot</h1>
 
-    <button class="theme-switch icon-button" onclick="pickTheme()"></button>
+    <button id="fixed-theme-switcher" class="theme-switch icon-button" onclick="pickTheme()"></button>
 
     <!--LANGUAGE SCREEN START-->
     <div id="language-screen">
@@ -79,6 +79,22 @@
         </form>
       </div>
     <!--API KEY SCREEN END-->
+
+
+    <!--CHAT SCREEN START-->
+    <main>
+        <img src="images/logo.png" alt="logo">
+
+        <section id="chat-tools"> 
+            <button id="regenerate-button" class="icon-button"></button>
+            <form action="">
+                <input type="text" id="prompt-bar">
+                <button id="send-button" type="button">Send</button>
+            </form>
+            <button class="theme-switch icon-button" onclick="pickTheme()"></button>
+            <button id="message-button" class="icon-button"></button>
+        </section>
+    </main>
 
     
 <script src="js/lang-switch-screen-switch.js"></script>
